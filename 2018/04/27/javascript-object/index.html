@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Test," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -79,15 +79,18 @@
 
 
 
-<meta name="keywords" content="Test">
+<meta name="description" content="原始值（undefined、null、布尔值、数字和字符串）1、原始值是不可变的：任何方法都无法改变一个原始值比如：字符串中所有的方法看上去返回了一个修改后的字符串，实际上返回的是一个新的字符串值 12345678910111213141516var s = &quot;hello&quot;;    //定义一个由小写字母组成的文本s.toUpperCase();    //返回“HELLO”， 但并没有改变s的值">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Test">
-<meta property="og:url" content="http://yoursite.com/2018/04/27/Test/index.html">
+<meta property="og:title" content="不可变的原始值与可变的对象引用">
+<meta property="og:url" content="http://www.tandy.ml/2018/04/27/javascript-object/index.html">
 <meta property="og:site_name" content="Tandy&#39;s Blog">
+<meta property="og:description" content="原始值（undefined、null、布尔值、数字和字符串）1、原始值是不可变的：任何方法都无法改变一个原始值比如：字符串中所有的方法看上去返回了一个修改后的字符串，实际上返回的是一个新的字符串值 12345678910111213141516var s = &quot;hello&quot;;    //定义一个由小写字母组成的文本s.toUpperCase();    //返回“HELLO”， 但并没有改变s的值">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-27T09:45:15.000Z">
+<meta property="og:updated_time" content="2018-05-03T09:04:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Test">
+<meta name="twitter:title" content="不可变的原始值与可变的对象引用">
+<meta name="twitter:description" content="原始值（undefined、null、布尔值、数字和字符串）1、原始值是不可变的：任何方法都无法改变一个原始值比如：字符串中所有的方法看上去返回了一个修改后的字符串，实际上返回的是一个新的字符串值 12345678910111213141516var s = &quot;hello&quot;;    //定义一个由小写字母组成的文本s.toUpperCase();    //返回“HELLO”， 但并没有改变s的值">
 
 
 
@@ -117,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/27/Test/"/>
+  <link rel="canonical" href="http://www.tandy.ml/2018/04/27/javascript-object/"/>
 
 
 
 
 
-  <title>Test | Tandy's Blog</title>
+  <title>不可变的原始值与可变的对象引用 | Tandy's Blog</title>
   
 
 
@@ -260,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/Test/">
+    <link itemprop="mainEntityOfPage" href="http://www.tandy.ml/2018/04/27/javascript-object/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tandy">
@@ -277,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Test</h1>
+          <h1 class="post-title" itemprop="name headline">不可变的原始值与可变的对象引用</h1>
         
 
         <div class="post-meta">
@@ -303,11 +306,22 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/04/27/javascript-object/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/04/27/javascript-object/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
           
-             <span id="/2018/04/27/Test/" class="leancloud_visitors" data-flag-title="Test">
+             <span id="/2018/04/27/javascript-object/" class="leancloud_visitors" data-flag-title="不可变的原始值与可变的对象引用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -338,7 +352,14 @@
       
 
       
-        
+        <h2 id="原始值（undefined、null、布尔值、数字和字符串）"><a href="#原始值（undefined、null、布尔值、数字和字符串）" class="headerlink" title="原始值（undefined、null、布尔值、数字和字符串）"></a>原始值（undefined、null、布尔值、数字和字符串）</h2><h3 id="1、原始值是不可变的：任何方法都无法改变一个原始值"><a href="#1、原始值是不可变的：任何方法都无法改变一个原始值" class="headerlink" title="1、原始值是不可变的：任何方法都无法改变一个原始值"></a>1、原始值是不可变的：任何方法都无法改变一个原始值</h3><p>比如：字符串中所有的方法看上去返回了一个修改后的字符串，实际上返回的是一个新的字符串值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">"hello"</span>;    <span class="comment">//定义一个由小写字母组成的文本</span></span><br><span class="line">s.toUpperCase();    <span class="comment">//返回“HELLO”， 但并没有改变s的值</span></span><br><span class="line"><span class="built_in">console</span>.log(s)      <span class="comment">//=&gt; "hello"：原始字符串的值并没有改变</span></span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">原始值的比较是值的比较：只有在它们的值相等时它们才相等</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">### 2、对象与原始值不同，它们是可变的</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="keyword">var</span> o = &#123;<span class="attr">x</span> : <span class="number">1</span>&#125;; <span class="comment">//定义一个对象</span></span><br><span class="line">o.x = <span class="number">2</span>;         <span class="comment">//通过改变对象的属性来改变对象</span></span><br><span class="line">o.y = <span class="number">3</span>;         <span class="comment">//再次更改这个对象，给它增加一个新的属性</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]; <span class="comment">//数组也是可以修改的</span></span><br><span class="line">a[<span class="number">0</span>] = <span class="number">0</span>;          <span class="comment">//更改数组的一个元素</span></span><br><span class="line">a[<span class="number">3</span>] = <span class="number">4</span>;          <span class="comment">//给数组增加一个新元素</span></span><br></pre></td></tr></table></figure>
+<p>对象的比较并非值的比较：即使两个对象包含同样的属性及相同的值，它们也是不相等的。各个索引元素完全相等的两个数组也不相等。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o = &#123;<span class="attr">x</span> : <span class="number">1</span>&#125;, p = &#123;<span class="attr">x</span> : <span class="number">1</span>&#125;; <span class="comment">//具有相同属性的两个对象</span></span><br><span class="line">o === p  <span class="comment">// =&gt; false：两个单独的对象永不相等</span></span><br><span class="line"><span class="keyword">var</span> a = [], b = []; <span class="comment">// 两个单独的空数组</span></span><br><span class="line">a === b;            <span class="comment">// =&gt; false： 两个单独的数组永不相等</span></span><br><span class="line"><span class="string">``</span><span class="string">`  </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">对象的比较是引用的比较，当且仅当它们引用同一个基对象时，它们才相等</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line"><span class="keyword">var</span> a = []; <span class="comment">//定义一个引用空数组的变量a</span></span><br><span class="line"><span class="keyword">var</span> b = a; <span class="comment">//变量b引用一个同数组</span></span><br><span class="line">b[<span class="number">0</span>] = <span class="number">1</span>;  <span class="comment">//通过变量b来修改引用的数组</span></span><br><span class="line">a[<span class="number">0</span>];      <span class="comment">// =&gt; 1: 变量a也会改修</span></span><br><span class="line">a === b;   <span class="comment">// =&gt; true, a与b引用同一个数组，因此它们相等</span></span><br></pre></td></tr></table></figure>
+<p>如果想得到一个对象或数组的副本，则必须显式复制对象的每个属性或数组的每个元素  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [‘a’, ‘b’, ‘c’];</span><br><span class="line"><span class="keyword">var</span> b = [];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; a.length; i++) &#123;</span><br><span class="line">    b[i] = a[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>同样的，如果想让两个单独的对象或数组，则必须比较它们的属性及元素  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">equalArrays</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (a.length != b.length) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; a.length; i++ ) &#123;</span><br><span class="line">        <span class="keyword">if</span> (a[i] !== b[i]) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -355,7 +376,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Test/" rel="tag"># Test</a>
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
         </div>
       
@@ -404,6 +425,16 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
 
   
 
@@ -630,6 +661,26 @@
 
   
 
+    
+      <script id="dsq-count-scr" src="https://Tandy.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://www.tandy.ml/2018/04/27/javascript-object/';
+          this.page.identifier = '2018/04/27/javascript-object/';
+          this.page.title = '不可变的原始值与可变的对象引用';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://Tandy.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
 
 
 
@@ -642,10 +693,6 @@
   
 
 
-
-
-
-  
 
 
 
